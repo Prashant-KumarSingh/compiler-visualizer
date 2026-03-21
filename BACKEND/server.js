@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 // ✅ FIXED PATH
-
+app.use(express.static(path.join(__dirname, "../public")));
 
 // ✅ Home route
 app.get("/", (req, res) => {
